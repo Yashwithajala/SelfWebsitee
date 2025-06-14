@@ -9,7 +9,7 @@
       scroll-behavior: smooth;
     }
     body {
-      
+      background: url('https://i.imgur.com/eOYkz5u.png');
       font-family: 'Courier New', monospace;
       color: #333;
       margin: 0;
@@ -103,6 +103,28 @@
         font-size: 1em;
       }
     }
+ #greet {
+      text-align: center;
+      padding: 7px;
+      margin-top: 10px;
+      background-color: #C7D9DD;
+      border: 2px dashed #9FB3DF;
+    }
+    #greet input {
+      font-family: 'Courier New', monospace;
+      padding: 8px;
+      font-size: 1em;
+      border: 1px dashed #9FB3DF;
+    }
+    #greet button {
+      font-family: 'Courier New', monospace;
+      padding: 8px;
+      font-size: 1em;
+      border: 1px dashed rgb(150, 172, 186);
+      background-color: #E8F9FF;
+      cursor: pointer;
+    }
+
   </style>
 </head>
 <body>
@@ -116,6 +138,13 @@
       <a href="#fun">blinkies</a>
     </nav>
 
+       <div id="greet">
+      <p>What's your name?</p>
+      <input type="text" id="username" placeholder="Type here...">
+      <button onclick="greetUser()">Say Hi!</button>
+      <p id="greeting"></p>
+    </div>
+
     <div id="about" class="section">
       <h2>About Me</h2>
       <p>Hii! I'm Yashwitha, frontend developer with a love for creative coding, nostalgia-infused design, and making things that feel like home on the web🌸</p>
@@ -124,10 +153,10 @@
 
 
     <div id="faves" class="section favorites">
-      <h2>A Little About Me🌼</h2>
+      <h2>A Little About Me</h2>
       <ul>
         <li> Love Pixels,Neobrutalism</li>
-        <li> Loves editing,doodling</li>
+        <li> Loves Editing,Doodling</li>
         <li> Favorite color:blue</li>
         <li> The weekend</li>
         <li> Freefire in free times</li>
@@ -138,8 +167,9 @@
     <div id="projects" class="section">
       <h2>Projects</h2>
       <ul>
-        <li><strong>Flavor Finder</strong> – A culinary website celebrating Indian South states & their dishes🍛</li>
-        <li><strong>Plant Disease Detection</strong> – Smart diagnosis using deep learning🌿</li>
+        <li><strong>Flavor Finder</strong> – A culinary website celebrating Indian South states & their dishes</li>
+        <li><strong>Plant Disease Detection</strong> – Smart diagnosis using deep learning</li>
+        <li><strong>TicTacToew</strong> – A pixel themed tictactoe.. wanna try- <a href="https://tictactoew.netlify.app/">clickme</a></li>
         <li><strong>Self Website👍🏿</strong> – This website itself ...hahaha</li>
       </ul>
     </div>
@@ -153,7 +183,6 @@
       </ul>
     </div>
 
-  
 
 
     <div class="section" id="fun">
@@ -171,10 +200,50 @@
       <p>Email: yashwithavs@gmail.com <br>
       Seeyalaterr!</p>
     </div>
+
+    <div>
+  
+    <img src="https://i.pinimg.com/736x/64/88/0b/64880b9b0fe5b53bbe3f7280d262b33f.jpg" alt="GitHub" style="height: 30px; margin: 5px;">
+  <a href="https://github.com/Yashwithajala" target="_blank"></a>
+  
+    <img src="https://i.pinimg.com/736x/3e/17/e8/3e17e88316cc49f8b98154f1e768386d.jpg" alt="LinkedIn" style="height: 30px; margin: 5px;">
+    <a href="https://www.linkedin.com/in/jala-yashwitha-vijayasree-965098258/" target="_blank"></a>
+
+  
+    <img src="https://i.pinimg.com/736x/b3/b1/2d/b3b12db9356d9b5fa205fb35f3c27e94.jpg" alt="Email" style="height: 30px; margin: 5px;">
+    <a href="mailto:yashwithajala@gmail.com"></a>
+</div>
+
   </main>
 
-  <footer>
+  <footer style="margin-top: 10px;border-top:2px dashed #aaa;padding: 10px;">
     This is footer fyi.....
   </footer>
+
+  
+
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script>
+  window.addEventListener('load', () => {
+    confetti({
+      particleCount: 150,
+      spread: 90,
+      startVelocity: 30,
+      angle: 90,
+      origin: { y: 0 }
+    });
+  });
+ function greetUser() {
+      const name = document.getElementById('username').value.trim();
+      const greeting = document.getElementById('greeting');
+      if (name) {
+        greeting.textContent = `Hey ${name}! You've got thiz`;
+      } else {
+        greeting.textContent = `Heyya! Tell me your name`;
+      }
+    }
+</script>
+
 </body>
 </html>
