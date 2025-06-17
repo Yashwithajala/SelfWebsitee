@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Something udk</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <style>
     *{
       scroll-behavior: smooth;
@@ -29,7 +30,7 @@
       font-size: 2em;
       color: #444;
       text-shadow: 1px 1px #fff;
-    }
+   }
     nav {
       background: #eee;
       padding: 10px;
@@ -59,10 +60,7 @@
       color: #666;
       margin-top: 30px;
     }
-     .favorites {
-      padding: 15px;
-      margin-top: 20px;
-    }
+    
     .favorites h2 {
       font-size: 1.5em;
       margin-bottom: 10px;
@@ -79,6 +77,26 @@
       .container {
         padding: 10px;
       }
+     .info-grid{
+      flex-direction: column;
+      align-items: center;
+      display: flex;
+      gap: 10px;
+     }
+     .grid-bg{
+      flex-direction: column;
+      align-items: center;
+      float: none;
+      padding: 10px;
+     }
+     .mcard{
+      width: 90%;
+      font-size: 14px;
+     }
+     .card img{
+      max-width: 100%;
+      height: auto;
+     }
       .avatar {
         float: none;
         display: block;
@@ -123,7 +141,82 @@
       background-color: #E8F9FF;
       cursor: pointer;
     }
+    .card {
+    /* font-family: 'Press Start 2P', cursive; */
+     font-family: 'Courier New', monospace;
+    border: 3px dashed;
+    padding: 5px;
+    /*width: 700px;*/
+    box-shadow: 8px 8px 0px #444;
+    margin-bottom: 40px;
+    
+}
+   .title-barr {
+     font-size: ;
+    background: #AAB99A;
+    padding: 10px;
+    /* text-align: center; */
+    border: 2px solid;
+    margin-bottom: 10px;
+}
 
+  .title-barr h1 {
+    margin: 0;
+    font-size: 20px;
+    color: #fff;
+}
+    .character-info {
+      background: #D0DDD0;
+      padding: 20px;
+      border: 3px solid black;
+    }
+
+    .character-info img {
+      width: 200px;
+      image-rendering: pixelated;
+    }
+.info-grid {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 10px;
+    /* margin-top: 20px; */
+}
+
+  .grid-bg {
+   
+    padding: 20px;
+    display: flex;
+    /* flex-wrap: wrap; */
+    gap: 20px;
+    float: right;
+}
+
+.mcard {
+  width: 200px;
+  background: white;
+  border: 2px solid #444;
+  box-shadow: 3px 3px 0 #000;
+  font-size: 13px;
+}
+
+.title-bar {
+  background: #a39c9c;
+  color: white;
+  padding: 5px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #444;
+}
+
+.close-btn {
+  cursor: default;
+}
+
+.content {
+  padding: 10px;
+  line-height: 1.6;
+}
   </style>
 </head>
 <body>
@@ -149,7 +242,7 @@
       <p>Hii! I'm Yashwitha, frontend developer with a love for creative coding, nostalgia-infused design, and making things that feel like home on the web🌸</p>
       <img src="https://i.pinimg.com/736x/78/de/8d/78de8d6d7b1777ef3ecf3a80d76b3654.jpg" alt="pixel avatar" class="avatar" />
     </div>
-
+  
 
     <div id="faves" class="section favorites">
       <h2>A Little About Me</h2>
@@ -159,9 +252,49 @@
         <li> Favorite color:blue</li>
         <li> The weekend</li>
         <li> Freefire in free times</li>
-        <li> PicsArt,Pinterest,Canva and Chill...</li>
       </ul>
     </div>
+
+    <div class="card">
+        <div class="title-barr">
+          <h1>“A card,you wierd”</h1>
+        </div>
+        <div class="character-info">
+          <div class="info-grid">
+            <img src="https://i.pinimg.com/736x/78/de/8d/78de8d6d7b1777ef3ecf3a80d76b3654.jpg" alt="Jeonghan Pixel">
+            <div>
+                    <div class="grid-bg" >
+  <div class="mcard">
+    <div class="title-bar">BIRTHDAY <span class="close-btn">✕</span></div>
+    <div class="content">- June 21 2005</div>
+  </div>
+
+  <div class="mcard">
+    <div class="title-bar">HOBBIES <span class="close-btn">✕</span></div>
+    <div class="content">
+      - programing<br />
+      - pixel art<br />
+      - Editing<br />
+      - videogames
+    </div>
+  </div>
+
+  <div class="mcard">
+    <div class="title-bar">Apps I love<span class="close-btn">✕</span></div>
+    <div class="content">
+        -Pinterest<br />
+      - PicsArt<br />
+      - Canva<br />
+    </div>
+  </div>
+            </div>
+          </div>
+          
+          
+        </div>
+  
+</div>
+      </div>
 
     <div id="projects" class="section">
       <h2>Projects</h2>
@@ -245,4 +378,4 @@
 </script>
 
 </body>
-</html>
+</html>          
